@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            height: 1000px;
+            background-color: pink;
+        }
+
+        /*    使用媒体查询 能针对不同屏幕区间, 设置不同的区间和样式*/
+        /*关于媒体查询: 关于媒体查询 @media*/
+/*        @font-face {!*字体图标的定义*!
+            
+        }
+        @keyframes  {
+            
+        }*/
+
+        /*
+        语法
+        @media screen and (max-width: 768px) and (min-width: 320px){
+            属性样式
+        }
+        */
+        @media screen and (max-width: 768px){
+        /*1. 在超小屏(768px) 以下 屏幕的时候, 当前容器的宽度 100%   背景为蓝色*/
+            .container{
+                width: 100%;
+                background-color: blue;
+            }
+        }
+
+        @media screen  and (min-width: 768px) and (max-width: 992px) {
+        /*    2. 在小屏设备的时候  (768px-992px)  当前容器的宽度 750px(比最小的宽度小, 则不会出现滚动条)   背景为绿色*/
+            .container{
+                width: 750px;
+                background-color: green;
+            }
+        }
+
+        @media screen  and (min-width: 992px) and (max-width:1200px)  {
+        /*    3. 在中屏设备的时候  (992px-1200px)  当前容器的宽度 970px    背景为红色*/
+            .container{
+                width: 970px;
+                background-color: red;
+            }
+        }
+
+        @media screen  and (min-width:1200px)  {
+            /*    4. 在大屏设备的时候  1200px以上  当前容器的宽度 1170px    背景为黄色*/
+            .container{
+                width: 1170px;
+                background-color: yellow;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<!--
+响应式容器:
+1. 在超小屏(768px) 以下 屏幕的时候, 当前容器的宽度 100%   背景为蓝色
+
+2. 在小屏设备的时候  (768px-992px)  当前容器的宽度 750px(比最小的宽度小, 则不会出现滚动条)   背景为绿色
+
+3. 在中屏设备的时候  (992px-1200px)  当前容器的宽度 970px    背景为红色
+
+4. 在大屏设备的时候  1200px以上  当前容器的宽度 1170px    背景为黄色
+
+-->
+<div class="container"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+1. 分析结构
+
+2. 通过源码选择器覆盖组件本身的选择器, 修改样式
+
+3. 响应式功能实现 (小屏幕的隐藏, 高度对齐)
+
+
+
+
+1.浪费带宽
+2.影响页面加载效率
+
+--
+按需加载
+pc端--加载pc端图片 >768px
+移动端--加载pc端图片<768px
+
+--
+控制属性出现,  控制dom元素
+js 辅助开发
+
+--
+数据动态渲染
+* (动态创建元素, 字符串拼接, 模板引擎, 框架渲染)
+
+/*ui框架: bootstrap, 妹子ui ,jqueryUi,easyUI,jqueryMobile, mui, framework7*/
+/*关于移动端UI框架: bootstrap, jqueryMobile, mui, framework7*/
+/*模板引擎:  art-template , handlebars, mustache, baiduTemplate, velocity,  underscore*/
+
+

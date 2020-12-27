@@ -1,0 +1,304 @@
+/*======reset css =======*/
+body{
+    font-size: 14px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #333;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #333;
+
+}
+
+/*自定义字体图标*/
+/*1.通过@font-face定义自己的字体*/
+@font-face {
+    /*2.申明自己的字体名称*/
+    font-family: 'wjs';
+    /*3.引入字体文件（约束某一段字符代码什么图案）*/
+    src:
+        url(../fonts/MiFie-Web-Font.svg) format('svg'),
+        url(../fonts/MiFie-Web-Font.eot) format('embedded-opentype'),
+        url(../fonts/MiFie-Web-Font.ttf) format('truetype'),
+        url(../fonts/MiFie-Web-Font.woff) format('woff');
+}
+
+/*4.怎么使用维护性更好*/
+.wjs_icon{
+    font-family:'wjs' ;
+}
+
+.wjs_icon_phone::before{
+    content: "\e908";
+}
+.wjs_icon_tel::before{
+    content: "\e909";
+}
+
+
+.wjs_icon_logo::before{
+    content: "\e920";
+}
+
+.wjs_icon_name::before{
+    content: "\e93e";
+}
+/*======modal css=======*/
+
+
+.wjs_topBar {
+    border-bottom: 1px solid #ccc;
+    font-size: 12px;
+    color: #666;
+
+}
+.wjs_topBar > .container{
+
+}
+
+.wjs_topBar > .container > .row{
+
+}
+
+
+.wjs_topBar > .container > .row > div{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-left: 1px solid #ccc;
+}
+
+.wjs_topBar > .container > .row > div:first-child{
+    border-left: none;
+}
+
+.wjs_topBar .btn-register{
+    border: none;
+    background-color: #e92322;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 12px;
+}
+
+
+.wjs_topBar .btn-login{
+    text-decoration: none;
+    font-size: 12px;
+    color: #666;
+}
+
+.wjs_topBar .btn-login:hover{
+    text-decoration: none;
+    color: #666;
+}
+
+
+/* + ,~ 选择器  + 紧邻的下一个兄弟元素 ~ 后面所有的兄弟元素*/
+
+/*.wjs_topBar > .container > .row > div{
+    height: 40px;
+}
+
+.wjs_topBar > .container > .row > div + div{
+    border-left: 1px solid #ccc;
+
+}*/
+
+.wjs_app{
+    display: block;
+
+}
+
+.wjs_app img{
+    display: none;
+}
+
+.wjs_app:hover img{
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    border: 1px solid #ccc;
+    border-top: none;
+    top:40px;
+    z-index: 100000;
+}
+
+
+/*导航条*/
+/*1.拷贝源码的模块样式: 准确定位到所有元素的选择器并且能够保证优先级比源码高*/
+/*精力放在样式上, 而不用放在选择器上*/
+/*2. 针对功能进行覆盖 , 不去覆盖其他组件样式: 更改模块名称, 将选择器全部转嫁到 wjs_nav, */
+/*3. 但是又一些没有用到的选择器  代码的冗余*/
+
+/*4. 删除: 降低代码量*/
+/*5. 保留: 利于维护, 方便产品更新的时候不用再去修改代码*/
+.wjs_nav {
+    margin-bottom: 0px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.wjs_nav .wjs_icon_logo{
+    font-size: 50px;
+    color: #e92322;
+    vertical-align: middle;
+}
+
+.wjs_nav .wjs_icon_name{
+    font-size: 36px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.wjs_nav .navbar-brand {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.wjs_nav .navbar-brand:hover,
+.wjs_nav .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.wjs_nav .navbar-text {
+    color: #777;
+}
+.wjs_nav .navbar-nav > li > a {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.wjs_nav .navbar-nav > li > a:hover,
+.wjs_nav .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: #777;
+    border-bottom: 3px solid #e92322;
+}
+.wjs_nav .navbar-nav > .active > a,
+.wjs_nav .navbar-nav > .active > a:hover,
+.wjs_nav .navbar-nav > .active > a:focus {
+    color: #555;
+    border-bottom: 3px solid #e92322;
+}
+.wjs_nav .navbar-nav > .disabled > a,
+.wjs_nav .navbar-nav > .disabled > a:hover,
+.wjs_nav .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.wjs_nav .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+}
+.wjs_nav .navbar-toggle:hover,
+.wjs_nav .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.wjs_nav .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.wjs_nav .navbar-collapse,
+.wjs_nav .navbar-form {
+    border-color: #e7e7e7;
+}
+.wjs_nav .navbar-nav > .open > a,
+.wjs_nav .navbar-nav > .open > a:hover,
+.wjs_nav .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .wjs_nav .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .wjs_nav .navbar-nav .open .dropdown-menu > li > a:hover,
+    .wjs_nav .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .wjs_nav .navbar-nav .open .dropdown-menu > .active > a,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.wjs_nav .navbar-link {
+    color: #777;
+}
+.wjs_nav .navbar-link:hover {
+    color: #333;
+}
+.wjs_nav .btn-link {
+    color: #777;
+}
+.wjs_nav .btn-link:hover,
+.wjs_nav .btn-link:focus {
+    color: #333;
+}
+.wjs_nav .btn-link[disabled]:hover,
+fieldset[disabled] .wjs_nav .btn-link:hover,
+.wjs_nav .btn-link[disabled]:focus,
+fieldset[disabled] .wjs_nav .btn-link:focus {
+    color: #ccc;
+}
+
+/*轮播图*/
+/*模块前缀 需要加*/
+.wjs_banner {
+}
+
+.wjs_banner .pc_imgBox{
+    display: block;/*a 标签变为块级元素*/
+    height: 400px;/*假设高度为500px*/
+    width: 100%;/*宽度占满屏幕*/
+    background-size: cover;/*既能铺满, 又能在高度固定的容器中实现自适应*/
+
+    background-position: center;/*图片居中*/
+    background-repeat: no-repeat;/*图片不重复*/
+    /*background-image: url("../images/slide_01_2000x410.jpg");*/
+}
+
+
+.wjs_banner .m_imgBox {
+    display: block;
+    width: 100%;
+}
+
+.wjs_banner .m_imgBox img{/*img 宽度与父容器 a 标签 宽度一致*/
+    display: block;
+    width: 100%;
+}
+
+
+
+
+.wjs_info {
+}
+
+.wjs_book {
+}
+
+.wjs_products {
+}
+
+.wjs_news {
+}
+
+.wjs_partner {
+}
+
+
+
