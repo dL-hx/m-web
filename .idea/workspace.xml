@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0d9cc25-4306-404e-8090-a67b8387c6aa" name="Default Changelist" comment="" />
+    <list default="true" id="a0d9cc25-4306-404e-8090-a67b8387c6aa" name="Default Changelist" comment="readme">
+      <change afterPath="$PROJECT_DIR$/day04/weijinsuo/lib/artTemplate/template-native.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/weijinsuo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day04/weijinsuo/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/weijinsuo/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/day04/weijinsuo/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/weijinsuo/json/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/day04/weijinsuo/json/data.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jdXY9GgxcRZ5Wi1rlTFGrpcbph" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -16,8 +26,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day04/weijinsuo/lib/artTemplate" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\89705\Desktop\移动Web端\day04\weijinsuo\lib\artTemplate" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -29,10 +44,23 @@
       <updated>1604134987388</updated>
       <workItem from="1604134988451" duration="184000" />
       <workItem from="1609091538922" duration="6000" />
+      <workItem from="1609091556971" duration="3108000" />
     </task>
+    <task id="LOCAL-00001" summary="readme">
+      <created>1609091673039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609091673039</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
   </component>
 </project>
