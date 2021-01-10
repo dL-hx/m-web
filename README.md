@@ -1,3 +1,42 @@
+## bootstrap 常用样式
+> 栅格
+```
+col-md-xx col-sm-xx ...
+```
+    
+> 隐藏类样式
+```
+hidden-xs hidden-sm ...
+```
+> 布局类
+> + .row
+> + .container 
+> + .flex-row
+> + .flex-column
+
+> + pull-left - 左浮动
+> + pull-right - 右浮动
+
+-------
+> clearfix - 清除浮动
+```code
+center-block - 内容变成块元素，并且居中
+show - 显示
+hidden - 隐藏
+sr-only - 隐藏在屏幕阅读器显示(不常用)
+```
+
+> 按钮样式
+```code
+默认样式 - class = btn btn-default
+深色样式 - class = btn btn-primary
+天蓝样式 - class = btn btn-info
+绿色样式 - class = btn btn-success
+黄色样式 - class = btn btn-warring
+红色样式 - class = btn btn-danger
+链接样式 - class = btn btn-link
+```
+    
 # m-web
 移动Web端-响应式
 
@@ -31,4 +70,58 @@ js 辅助开发
 /*关于移动端UI框架: bootstrap, jqueryMobile, mui, framework7*/
 /*模板引擎:  art-template , handlebars, mustache, baiduTemplate, velocity,  underscore*/
 
+## css 高度垂直居中
+使用padding去挤压, 不要 line-height
+padding : 40px 0;
 
+## 做数据缓存 第一次请求的data 放到window上, 当有缓存时候, 无需请求数据, 无数据时候需要请求数据
+``` javascript
+  var getData = function (callback) {
+    // 缓存了数据
+    if (window.data) {
+      callback && callback(window.data);
+    } else {
+      // 没有数据调用接口, 缓存数据 render
+      /*1.获取轮播图数据  ajax*/
+      $.ajax({
+        type: "get",
+        url: "json/data.json",
+        dataType: "json" /*强制转换后台返回的数据 为 json 对象 */,
+        /*强制转换不成功程序报错,  不会执行success, 执行error 回调*/
+        data: {},
+        success: function (data) {
+          // 回调函数
+          window.data = data; //缓存数据
+          callback && callback(window.data); // 渲染数据
+        },
+      });
+    }
+  };
+  var render = function () {
+    getData(function (data) {
+      // console.log(data)
+      /*2.根据轮播图数据动态渲染, 根据当前设备  屏幕宽度判断 $.width(),选择大图小图 ,768px*/
+      var isMobile = $(window).width() < 768 ? true : false;
+      console.log(data);
+      /*2.2 把数据转换成html 格式的字符串*/
+      /*使用模板引擎, 那些html静态内容需要变成动态的*/
+      /*发现: 点容器  图片容器  新建模板*/
+      /*开始使用*/
+      /*<% console.log(list) %>   模板引擎内不可使用外部变量*/
+      var ponitHtml = template("pointTemplate", { list: data });
+      // console.log('ponitHtml', ponitHtml)
+      var imageHtml = template("imageTemplate", { list: data, isM: isMobile });
+      console.log("imageTemplate", imageHtml);
+
+      /*2.3 把字符串渲染页面当中*/
+      $(".carousel-indicators").html(ponitHtml);
+
+      $(".carousel-inner").html(imageHtml);
+    });
+  };
+    $(window).on("resize", function () {
+      render();
+      /* 通过js 主动触发某个事件 */
+    })
+    .trigger("resize");
+```
