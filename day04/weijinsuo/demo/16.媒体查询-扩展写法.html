@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            height: 1000px;
+            background-color: blue;
+        }
+                
+        @media (min-width: 768px){
+            .container{
+                width: 750px;
+                background-color: green;
+            }
+        }
+
+        @media (min-width: 992px){
+            .container{
+                width: 970px;
+                background-color: red;
+            }
+        }
+
+
+        @media (min-width: 1200px){
+            .container{
+                width: 1170px;
+                background-color: yellow;
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<!--
+响应式容器:
+1. 在超小屏(768px) 以下 屏幕的时候, 当前容器的宽度 100%   背景为蓝色
+
+2. 在小屏设备的时候  (768px-992px)  当前容器的宽度 750px(比最小的宽度小, 则不会出现滚动条)   背景为绿色
+
+3. 在中屏设备的时候  (992px-1200px)  当前容器的宽度 970px    背景为红色
+
+4. 在大屏设备的时候  1200px以上  当前容器的宽度 1170px    背景为黄色
+
+-->
+<div class="container"></div>
+</body>
+</html>
