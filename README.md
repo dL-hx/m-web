@@ -16,6 +16,7 @@ hidden-xs hidden-sm ...
 
 > + pull-left - 左浮动
 > + pull-right - 右浮动
+> + text-right  文字右对齐
 
 -------
 > clearfix - 清除浮动
@@ -127,3 +128,4 @@ padding : 40px 0;
     })
     .trigger("resize");
 ```
+### 移动端响应式页签

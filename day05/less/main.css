@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*注释: 在css当中可以使用, 所有编译的过程当中生成在css文件*/
+/*变量*/
+div {
+  background-color: #e92322;
+}
+a:hover {
+  color: #e92322;
+}
+/*变量 用于字符拼接 的使用方法*/
+.box {
+  color: #e92322;
+}
+/*混入
+其他函数, 其他类混入样式中
+*/
+/*组合样式的例子*/
+/*类混入*/
+/*函数混入*/
+/*定义函数*/
+/*定义函数包含参数*/
+/*
+1.定义了参数(没有默认值), 调用时候必须传参
+2.怎么定义默认值,  和定义变量值是一样的
+3.定义了参数(有默认值), 可传可不传
+4.注意参数可用格式
+*/
+.w50-f_left {
+  width: 50%;
+  float: right;
+  border-radius: 20px;
+  /*css3 兼容补充*/
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+}
+.wjs_app {
+  display: block;
+}
+.wjs_app img {
+  display: none;
+}
+.wjs_app:hover img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  border: 1px solid #ccc;
+  border-top: none;
+  top: 40px;
+  z-index: 100000;
+}
+.wjs_app::before {
+  content: '';
+}
+.wjs_app > div {
+  display: block;
+}
+/*内置函数*/
+/*运算*/
+ul {
+  width: 7000%;
+}
+ul li {
+  width: 10%/7;
+  color: #ff80ff;
+  background-color: #262626;
+  /*内置函数*/
+  border-color: #990000;
+}
+/*# sourceMappingURL=main.css.map */
