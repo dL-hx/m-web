@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// 混入 -- 函数
+
+// 遍历使用的是for 循环
+// less 没有循环语法
+// 使用函数迭代   死循环
+// 根据数组的长度去停止当前的循环
+// 给函数的执行附加条件
+// 需要序号来判断,  通过序号来遍历 @index 1 开始---循环时候改变 ++ -> -- 反转逻辑  可以修改 循环的方向
+// 遍历成功
+
+.adapterMixin(@index) when (@index > 0) {
+  // extract 从数组中提取下标
+  @media screen and (min-width: extract(@adapterDeviceList, @index)) {
+    html {
+      font-size: @baseFontSize / @psdWidth * extract(@adapterDeviceList, @index);
+    }
+  }
+
+  .adapterMixin(@index - 1);
+  //   @media screen and (min-width: 720px) {
+  //     html {
+  //       font-size: 100px /750px * 720px;
+  //     }
+  //   }
+
+  //   @media screen and (min-width: 750px) {
+  //     html {
+  //       font-size: 100px;
+  //     }
+  //   }
+}
